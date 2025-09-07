@@ -1,24 +1,39 @@
-# Logs
-logs
-*.log
+# ===========================
+# Node.js / Backend
+# ===========================
+node_modules/
 npm-debug.log*
-yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+.env
+/dist
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# ===========================
+# React / Frontend
+# ===========================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.DS_Store
+frontend/.cache
+
+# ===========================
+# Python / ML
+# ===========================
+ml/venv/
+ml/__pycache__/
+ml/*.pyc
+ml/.DS_Store
+ml/.ipynb_checkpoints/
+ml/*.h5
+ml/*.pkl
+
+# ===========================
+# General OS / IDE
+# ===========================
+*.log
+*.swp
+*.swo
+*.DS_Store
+.idea/
+.vscode/
