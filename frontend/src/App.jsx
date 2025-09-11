@@ -1,8 +1,22 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React from 'react'
+import Soil from './pages/Soil'
+import Home from './pages/Home'
+import Scheme from './pages/Scheme'
+import Footer from "./pages/Footer";
+import Navbar from "./pages/Navbar";
 
 const App = () => {
   return (
-    <div className='bg-blue-500 text-white p-4 rounded'>Home</div>
+    <>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/soil-data" element={<Soil />} />
+        <Route path="/scheme" element={<Scheme />} />
+      </Routes>
+    <Footer />
+    </>
   )
 }
 
