@@ -49,7 +49,7 @@ function Soil() {
 
   const handleGetRecommendation = async () => {
     if (!latLng) return;
-    const res = await fetch("http://127.0.0.1:5000/recommend", {
+    const res = await fetch("https://sih-agro-prototype-ekvl.onrender.com/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ lat: latLng.lat, lng: latLng.lng }),
