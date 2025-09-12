@@ -53,7 +53,6 @@ def recommend_crops(soil_props):
 
     return top3
 
-
 def get_location_name(lat, lng):
     try:
         location = geolocator.reverse((lat, lng), exactly_one=True)
@@ -63,6 +62,11 @@ def get_location_name(lat, lng):
         return {"district": district, "state": state}
     except:
         return {"district": "Unknown", "state": "Unknown"}
+
+# ✅ Root route for Render health check
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Backend is running!"})
 
 @app.route("/recommend", methods=["POST"])
 def recommend():
@@ -81,4 +85,4 @@ def recommend():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
